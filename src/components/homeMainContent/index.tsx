@@ -1,23 +1,33 @@
-
+import { FormattedMessage } from "react-intl";
+import {
+  ES6,
+  TypeScript,
+  Html5,
+  Css3,
+  MongoDB,
+  Expressjs,
+  Nodejs,
+  Reactjs,
+  Redux,
+  Nestjs,
+  Nextjs,
+} from "../technologies/index";
 const MainContent = () => (
   <main id="home-main">
     <section id="home-main-section">
       <div className="about_section">
         <h3>
-          <i className="fas fa-user-tie" /> Resumé
+          <i className="fas fa-user-tie" />
+          <FormattedMessage id="home.summary" />
         </h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur
+          <FormattedMessage id="home.summary.content" />
         </p>
       </div>
       <div className="about_section">
         <h3>
-          <i className="fas fa-user-graduate" /> Education
+          <i className="fas fa-user-graduate" />
+          <FormattedMessage id="home.education" />
         </h3>
         <ul className="education_list">
           <li>
@@ -31,7 +41,6 @@ const MainContent = () => (
             <p className="education_list_desc">
               Licence appliqué en réseaux informatique au sein de
               <b>
-                {" "}
                 l’Institut Supérieur d’Informatique et de Techniques des
                 communication(ISIT’Com)– Hammam Sousse
               </b>
@@ -48,7 +57,8 @@ const MainContent = () => (
       </div>
       <div className="about_section">
         <h3>
-          <i className="fas fa-business-time" /> Experience
+          <i className="fas fa-business-time" />
+          <FormattedMessage id="home.experience" />
         </h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem amet
@@ -67,19 +77,161 @@ const MainContent = () => (
         </p>
       </div>
     </section>
-    <aside className="">
-      <h3>Compétences</h3>
-      <ul>
-        <li>Arabe</li>
-        <li>Anglais</li>
-        <li>fracais</li>
-      </ul>
-      <h3>Langues</h3>
-      <ul>
-        <li>Arabe</li>
-        <li>Anglais</li>
-        <li>fracais</li>
-      </ul>
+    <aside
+      style={{ border: "1px solid rgba(0, 0, 0, 0.12)", height: "fit-content" }}
+    >
+      <div>
+        <h3>
+          <FormattedMessage id="home.skills" />
+        </h3>
+        <div className="skills-container">
+          <h4>
+            <FormattedMessage id="home.skills.prog" />
+          </h4>
+          <div className="skills-list">
+            <ES6 />
+            <TypeScript />
+            <Html5 />
+            <Css3 />
+          </div>
+        </div>
+        <div className="skills-container">
+          <h4>
+            <FormattedMessage id="home.skills.db" />
+          </h4>
+          <div className="skills-list">
+            <MongoDB />
+          </div>
+        </div>
+        <div className="skills-container">
+          <h4>
+            <FormattedMessage id="home.skills.fl" />
+          </h4>
+          <div className="skills-list">
+            <Expressjs />
+            <Reactjs />
+            <Nodejs />
+            <Redux />
+            <Nestjs />
+            <Nextjs />
+          </div>
+        </div>
+      </div>
+      <div className="skills-container">
+        <h4>
+          <FormattedMessage id="home.skills.design" />
+        </h4>
+        <div className="skills-list">
+          <div
+            className="skills"
+            style={{
+              color: "#ec74ee",
+              backgroundColor: "#ec74ee2e",
+              borderColor: "#ec74ee",
+            }}
+          >
+            Adobe XD
+          </div>
+        </div>
+      </div>
+      <div className="skills-container">
+        <h4>
+          <FormattedMessage id="home.skills.col" />
+        </h4>
+        <div className="skills-list">
+          <div
+            className="skills"
+            style={{
+              color: "#1b1f23",
+              backgroundColor: "#1b1f232e",
+              borderColor: "#1b1f23",
+            }}
+          >
+            Github
+          </div>
+
+          <div
+            className="skills"
+            style={{
+              color: "#f49e2d",
+              backgroundColor: "#f49e2d2e",
+              borderColor: "#f49e2d",
+            }}
+          >
+            Gitlab
+          </div>
+          <div
+            className="skills"
+            style={{
+              color: "#2580f7",
+              backgroundColor: "#2580f72e",
+              borderColor: "#2580f7",
+            }}
+          >
+            Jira
+          </div>
+          <div
+            className="skills"
+            style={{
+              color: "#ca4059",
+              backgroundColor: "#ca40592e",
+              borderColor: "#ca4059",
+            }}
+          >
+            Slack
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>
+          <FormattedMessage id="home.languages" />
+        </h3>
+        <ul id="languages-skills">
+          <li>
+            <div className="languages-degree-info">
+              <span>
+                <FormattedMessage id="home.languages.ar" />
+              </span>
+              <span className="languages-degree">100%</span>
+            </div>
+            <div
+              className="languages-degree-prog"
+              style={{ width: "100%", borderRadius: "0.25rem" }}
+            >
+              <div style={{ width: "100%" }}></div>
+            </div>
+          </li>
+
+          <li>
+            <div className="languages-degree-info">
+              <span>
+                <FormattedMessage id="home.languages.fr" />
+              </span>
+              <span className="languages-degree">80%</span>
+            </div>
+            <div
+              className="languages-degree-prog"
+              style={{ width: "100%", borderRadius: "0.25rem" }}
+            >
+              <div style={{ width: "80%" }}></div>
+            </div>
+          </li>
+          <li>
+            <div className="languages-degree-info">
+              <span>
+                <FormattedMessage id="home.languages.en" />
+              </span>
+              <span className="languages-degree">60%</span>
+            </div>
+            <div
+              className="languages-degree-prog"
+              style={{ width: "100%", borderRadius: "0.25rem" }}
+            >
+              <div style={{ width: "60%" }}></div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </aside>
   </main>
 );

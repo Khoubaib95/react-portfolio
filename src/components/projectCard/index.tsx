@@ -1,69 +1,73 @@
-import { useState } from "react";
+import { Tech, techPropType } from "../../components/technologies/index";
 
 const ProjectCard = ({
-  /*projectImgSrc,*/ projectType,
-  projectTitle,
-  projectDesc,
-  technologieList,
-  projectWebSite,
+  /*img,*/ type,
+  name,
+  description,
+  mission,
+  technologie,
+  website,
   github,
-}: any) => {
-  //const [seeMore, setSeeMore] = useState<boolean>(false);
-
-  return (
-    <div className="project-card">
-      <div className="project-img-container">
-        {<img src="/images/portfolio-website-image.png" />}
+}: any) => (
+  <div className="project-card">
+    <div className="project-img-container">
+      {<img src="/images/portfolio-website-image.png" alt="Not Fount" />}
+    </div>
+    <div className="project-content">
+      <h3 className="project-title">{name}</h3>
+      <p className="project-description">{description}</p>
+      <div className="project-mission">
+        <h4 style={{ fontWeight: "bold" }}>Mession :</h4>
+        <p style={{ margin: 0 }}>
+          this is my Portfolio Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </p>
       </div>
-      <div className="project-content">
-        <h3 className="project-title">{projectTitle}</h3>
-        <p className="project-description">{projectDesc}</p>
-
-        {technologieList && (
-          <div className="project-technologies">
-            <h4 style={{ fontWeight: "bold" }}>Technologies : </h4>
-            {technologieList?.map((t: string, i: string) => (
-              <div key={i}>{t}</div>
-            ))}
-          </div>
-        )}
-        <div className="project-external-link">
-          <h4 style={{ fontWeight: "bold" }}>Preview : </h4>
-          <div className="project-github">
-            {github.isNotPrivate ? (
-              <div className="project-github-public">
-                <a
-                  style={{ color: "#3fb950" }}
-                  href={github.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-github" style={{ marginRight: "3px" }} />
-                  see on github
-                </a>
-              </div>
-            ) : (
-              <div className="project-github-private">
+      <div className="project-technologies">
+        <h4 style={{ fontWeight: "bold" }}>Technologies : </h4>
+        <div style={{ display: "flex", flexWrap: "wrap", marginLeft: "5px" }}>
+          {technologie?.map((t: techPropType, i: string) => (
+            <Tech key={i} color={t.color} name={t.name} />
+          ))}
+        </div>
+      </div>
+      <div className="project-external-link">
+        <h4 style={{ fontWeight: "bold" }}>Preview : </h4>
+        <div className="project-github">
+          {github.isPrivate ? (
+            <div className="project-github-private">
+              <i
+                className="fab fa-github"
+                style={{ color: "#b9b9b9", marginRight: "3px" }}
+              />
+              Private on github
+            </div>
+          ) : (
+            <div className="project-github-public">
+              <a
+                style={{ color: "inherit" }}
+                href={github.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <i
                   className="fab fa-github"
-                  style={{ color: "grey", marginRight: "3px" }}
+                  style={{ marginRight: "3px", color: "inherit" }}
                 />
-                this project is private on github
-              </div>
-            )}
-          </div>
-          {projectWebSite && (
-            <div className="project-website">
-              <i
-                className="fas fa-globe-africa"
-                style={{ marginRight: "3px" }}
-              />
-              {projectWebSite}
+                See on github
+              </a>
             </div>
           )}
         </div>
+        {website && (
+          <div className="project-website">
+            <i className="fas fa-globe-africa" style={{ marginRight: "3px" }} />
+            {website}
+          </div>
+        )}
       </div>
     </div>
-  );
-};
+  </div>
+);
+
 export default ProjectCard;
