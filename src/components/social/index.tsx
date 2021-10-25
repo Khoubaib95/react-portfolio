@@ -41,7 +41,16 @@ const Social = () => {
               />
               <span>+216 99 540 894</span>
               <span className="phone-call">
-                <i className="fas fa-phone" />
+                <a
+                  href="tel:+216 99 540 894"
+                  style={{
+                    display: "inherit",
+                    alignItems: "inherit",
+                    color: "inherit",
+                  }}
+                >
+                  <i className="fas fa-phone-alt" />
+                </a>
               </span>
             </div>
             <div
@@ -67,7 +76,16 @@ const Social = () => {
               />
               <span>+216 52 694 427</span>
               <span className="phone-call">
-                <i className="fas fa-phone" />
+                <a
+                  href="tel:+216 52 694 427"
+                  style={{
+                    display: "inherit",
+                    alignItems: "inherit",
+                    color: "inherit",
+                  }}
+                >
+                  <i className="fas fa-phone-alt" />
+                </a>
               </span>
             </div>
             {isCopy && (
