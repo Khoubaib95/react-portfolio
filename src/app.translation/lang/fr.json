@@ -37,5 +37,12 @@
   "contact.reset": "Réinitialiser",
   "contact.ou": "OU",
   "contact.send-email": "Envoyer un e-mail directement",
-  "contact.copy": "copié"
+  "contact.copy": "copié",
+  "project.tech": "Technologies",
+  "project.preview": "Aperçu",
+  "blog.content": "Ce contenu sera bientôt disponible",
+  "blog.thankyou": "Merci",
+  "page.notfound": "PAGE NON TROUVÉE",
+  "footer.copyright": "Droits d'auteur",
+  "footer.allRight": "Tous droits réservés"
 }

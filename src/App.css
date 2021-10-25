@@ -34,8 +34,6 @@ h6 {
   padding: 0;
   font-weight: 300;
   line-height: 1.2;
-  /* color: red;
-  /*  font-family: 'Source Sans Pro', sans-serif;*/
 }
 /*----- React Root Div------*/
 #root {
@@ -72,7 +70,6 @@ nav {
   display: flex;
   background-color: white;
   width: 100%;
-  /*border: 1px solid;*/
   height: 93px;
   align-items: center;
   padding: 0 5%;
@@ -98,7 +95,6 @@ nav {
   margin: 0 auto;
 }
 #navList li {
-  /*border:1px solid #ccc;*/
   width: 25%;
   height: 100%;
 }
@@ -112,20 +108,16 @@ nav {
   font-size: 19px;
   width: 100%;
   height: 100%;
-  /* border: 1px solid red;*/
 }
 #navList li a:hover,
 #dropdown:hover {
-  background-color: rgb(237, 237, 243); /*#E2E2E2;*/
-  /*color: blueviolet;*/
+  background-color: rgb(237, 237, 243);
   color: #26d0ce;
   cursor: pointer;
   font-weight: bold;
 }
 
 #dropdown {
-  /*margin: auto 0;*/
-  /* border: 1px solid;*/
   width: 50px;
   text-align: center;
   cursor: pointer;
@@ -159,7 +151,7 @@ nav {
   background-color: #acd7e6 !important;
 }
 .activNavList {
-  background-color: rgb(237, 237, 243); /*#E2E2E2;*/
+  background-color: rgb(237, 237, 243);
   color: blueviolet !important;
   cursor: pointer;
   font-weight: bold !important;
@@ -245,7 +237,6 @@ nav {
 #mobile-navList li {
   margin: 10px 0;
   text-align: center;
-  /*border: 1px solid red;*/
   height: 35px;
 }
 #mobile-navList li a {
@@ -267,7 +258,6 @@ nav {
 /*-------------------   Index Page Style   -------------------*/
 
 header {
-  /* border: 1px solid #000000;*/
   height: 310px;
   color: white;
   padding: 10px 10%;
@@ -293,7 +283,6 @@ abbr {
 }
 #user_image {
   height: 260px;
-  /*width: 300px;*/
   border-radius: 50%;
   margin: auto 50px;
   box-shadow: 0px 0px 20px 2px #f3f3f3;
@@ -325,7 +314,6 @@ aside {
 }
 aside,
 section {
-  /* border: 1px solid lightgray;*/
   background-color: #fafafa;
 }
 .skills-container {
@@ -369,9 +357,6 @@ section {
 #languages-skills li {
   margin-bottom: 5px;
 }
-
-.languages-degree {
-}
 .languages-degree-info {
   margin-bottom: 5px;
   display: flex;
@@ -402,7 +387,6 @@ h3 i {
   padding: 0 10px;
 }
 .about_section {
-  /*border-radius: 5px 0 0 5px;*/
   transition: 0.2s;
   padding: 7px 15px;
   margin-bottom: 15px;
@@ -426,7 +410,6 @@ h3 i {
   margin-top: 2%;
   min-width: 85px;
   font-weight: 600;
-  /*text-decoration: underline;*/
 }
 .education_list_desc {
   margin: 2% 0 0 0;
@@ -461,7 +444,6 @@ h3 i {
     flex-direction: column;
   }
 }
-/* Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {
   #root {
     padding-top: 0;
@@ -488,7 +470,6 @@ h3 i {
     margin: 0;
     width: 230px;
     height: 230px;
-    /*border-radius: 10px;*/
   }
   #title span {
     font-size: 18px;
@@ -540,7 +521,6 @@ h3 i {
   width: 85%;
   box-shadow: 0px 0px 6px 0px rgb(0 0 0 / 10%);
 }
-
 .project-header-type {
   width: 30%;
   height: 32px;
@@ -576,7 +556,7 @@ h3 i {
   position: relative;
   left: 0%;
   left: 50%;
-  background-color: blueviolet; /*#26d0ce;*/
+  background-color: blueviolet;
   transition: left 0.3s;
 }
 .project-card {
@@ -603,12 +583,10 @@ h3 i {
   width: 65%;
   padding: 10px;
 }
-
 .project-title {
   font-weight: bold;
   font-size: x-large;
 }
-
 .project-description {
   text-align: justify;
   margin: 10px auto;
@@ -662,7 +640,6 @@ h3 i {
   padding: 2px 10px;
   margin-bottom: 2px;
 }
-
 @media (max-width: 768px) {
   #project-main {
     width: 95%;
@@ -677,7 +654,6 @@ h3 i {
     padding: 10px 0;
     width: 95%;
   }
-
   .project-img-container {
     width: 90%;
   }
@@ -692,16 +668,9 @@ h3 i {
     width: 100%;
   }
 }
-
 /*---------***-------   Project Page Style   ---------***-------*/
-
 /*-------------------   Contact Page Style   -------------------*/
-#contact-main {
-  /*margin-top: 93px;
 
-  /* background: url("../image/message.png");
-  background-repeat: no-repeat;*/
-}
 .contact-container-filter {
   position: relative;
   top: 0px;
@@ -723,7 +692,7 @@ h3 i {
 }
 .contact-container {
   position: absolute;
-  top: 93px;
+  top: 65px;
   left: 0;
   padding-top: 60px;
   display: flex;
@@ -951,6 +920,7 @@ h3 i {
 }
 #phone-number {
   border: 1px solid rgba(0, 0, 0, 0.125);
+  font-weight: bold;
   position: absolute;
   width: 250px;
   background-color: white;
@@ -970,7 +940,6 @@ h3 i {
   height: 45px;
 }
 .clipboard-copy {
-  margin-right: 10px;
   border-radius: 50%;
   background-color: rgb(226, 226, 226);
   height: 30px;
@@ -981,6 +950,17 @@ h3 i {
   align-items: center;
   cursor: copy;
 }
+.phone-call {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  border: 2px solid green;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
 /* Medium devices (tablets, 768px and up)*/
 @media (max-width: 768px) {
   #contact-main {
@@ -990,7 +970,6 @@ h3 i {
   }
   #social ul {
     flex-direction: row;
-    /*width: 100%;*/
   }
   #social {
     z-index: 0;
@@ -1006,8 +985,6 @@ h3 i {
     top: 112px;
     flex-direction: column;
     align-items: center;
-    /*width: 100%;
-    height: 80vh;*/
   }
   .contact-left {
     width: 60%;
@@ -1027,8 +1004,25 @@ h3 i {
   #social ul li {
     border-radius: 0px;
   }
+  #phone-number div {
+    width: 230px;
+  }
+  .phone-call {
+    display: flex;
+  }
 }
 /*---------***-------   Contact Page Style   ---------***-------*/
+/*-------------------   Blog Page Style   -------------------*/
+#blog-container {
+  height: calc(100vh - 163px);
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+  #blog-container {
+    height: calc(100vh - 120px);
+  }
+}
+/*---------***-------   Blog Page Style   ---------***-------*/
 
 /*-------------------   Footer Component Style   -------------------*/
 footer {
@@ -1045,9 +1039,15 @@ footer {
 #footer-link {
   color: blueviolet;
 }
-/*---------***-------   Footer Component Style   ---------***-------*/
 
-/*-------------------   Footer Component Style   -------------------*/
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+  footer {
+    font-size: 13px;
+  }
+}
+/*---------***-------   Footer Component Style   ---------***-------*/
+/*-------------------   Loader Component Style   -------------------*/
 .loader-container {
   height: calc(100vh - 203px);
   padding-top: 70px;
@@ -1067,4 +1067,43 @@ footer {
     transform: rotate(360deg);
   }
 }
-/*---------***-------   Footer Component Style   ---------***-------*/
+/*---------***-------   Loader Component Style   ---------***-------*/
+/*-------------------   Not Found Component Style   -------------------*/
+#not-found-container {
+  height: calc(100vh - 163px);
+}
+#not-found {
+  margin: 30px auto;
+  width: 50%;
+  text-align: center;
+}
+#not-found h1 {
+  font-size: 90px;
+  font-weight: bold;
+}
+#not-found p {
+  font-size: 30px;
+  margin: 10px 0px;
+}
+
+#not-found a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  margin: 15px auto 0px;
+  height: 20px;
+  background-color: blue;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 768px) {
+  #not-found-container {
+    height: calc(100vh - 120px);
+  }
+}
+/*---------***-------   Not Found Component Style   ---------***-------*/

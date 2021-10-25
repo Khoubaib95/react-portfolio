@@ -9,6 +9,7 @@ const Home = React.lazy(() => import("./pages/home/index"));
 const Project = React.lazy(() => import("./pages/project/index"));
 const Contact = React.lazy(() => import("./pages/contact/index"));
 const Blog = React.lazy(() => import("./pages/blog/index"));
+const NotFound = React.lazy(() => import("./pages/notFound/index"));
 
 function App() {
   const [language, setLanguage] = useState<string>(
@@ -35,13 +36,16 @@ function App() {
                 <Contact language={language} />
               </Suspense>
             </Route>
-            <Route exact path="/l" component={Loader} />
             <Route exact path="/blog">
               <Suspense fallback={<Loader />}>
                 <Blog />
               </Suspense>
             </Route>
-            <Route exact render={() => <h4>404 Not Found</h4>} />
+            <Route exact>
+              <Suspense fallback={<Loader />}>
+                <NotFound />
+              </Suspense>
+            </Route>
           </Switch>
           <Footer />
         </Router>

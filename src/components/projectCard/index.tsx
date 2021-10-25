@@ -1,4 +1,5 @@
 import { Tech, techPropType } from "../../components/technologies/index";
+import { FormattedMessage } from "react-intl";
 
 const ProjectCard = ({
   /*img,*/ type,
@@ -24,7 +25,9 @@ const ProjectCard = ({
         </p>
       </div>
       <div className="project-technologies">
-        <h4 style={{ fontWeight: "bold" }}>Technologies : </h4>
+        <h4 style={{ fontWeight: "bold" }}>
+          <FormattedMessage id="project.tech" /> :
+        </h4>
         <div style={{ display: "flex", flexWrap: "wrap", marginLeft: "5px" }}>
           {technologie?.map((t: techPropType, i: string) => (
             <Tech key={i} color={t.color} name={t.name} />
@@ -32,7 +35,9 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="project-external-link">
-        <h4 style={{ fontWeight: "bold" }}>Preview : </h4>
+        <h4 style={{ fontWeight: "bold" }}>
+          <FormattedMessage id="project.preview" /> :{" "}
+        </h4>
         <div className="project-github">
           {github.isPrivate ? (
             <div className="project-github-private">

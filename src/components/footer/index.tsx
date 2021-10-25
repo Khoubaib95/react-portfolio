@@ -1,12 +1,16 @@
 //import { NavLink } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
+
 const Footer = () => (
   <footer>
-    Copyright &copy; 2021&nbsp;
+    <FormattedMessage id="footer.copyright" /> &copy; {new Date().getFullYear()}
+    &nbsp;
     {/*<a href="http://Khoubaib-ab.me" target="_blank" rel="noopener noreferrer">
       khoubaib-ab.me
     </a>*/}
     <span style={{ color: "blueviolet" }}>Abdellaoui Khoubaib</span>
-    &nbsp;All Rights Reserved
+    &nbsp;
+    <FormattedMessage id="footer.allRight" />
   </footer>
 );
 export default Footer;

@@ -1,9 +1,10 @@
 import SEO from "../../components/seo";
+import { FormattedMessage } from "react-intl";
 
 const Blog = () => (
   <>
     <SEO title="Blog" />
-    <div style={{ height: "calc(100vh - 93px)" }}>
+    <div id="blog-container" style={{}}>
       <div
         style={{
           width: "45%",
@@ -17,11 +18,14 @@ const Blog = () => (
           minWidth: "225px",
           //-webkit-box-shadow: 0px 0px 5px 0px #cccccca6;
           //-moz-box-shadow: 0px 0px 5px 0px #cccccca6;
-          //borderTopColor: "red",
         }}
       >
-        <h2>This content is going to be available soon</h2>
-        <span style={{ fontSize: 25 }}>Thank you !</span>
+        <h2>
+          <FormattedMessage id="blog.content" />
+        </h2>
+        <span style={{ fontSize: 25 }}>
+          <FormattedMessage id="blog.thankyou" /> !
+        </span>
       </div>
     </div>
   </>

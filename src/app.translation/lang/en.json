@@ -37,5 +37,12 @@
   "contact.reset": "Reset",
   "contact.ou": "OR",
   "contact.send-email": "Send Email Directly",
-  "contact.copy": "copied"
+  "contact.copy": "copied",
+  "project.tech": "Technologies",
+  "project.preview": "Preview",
+  "blog.content": "This content is going to be available soon",
+  "page.notfound": "PAGE NOT FOUND",
+  "blog.thankyou": "Thank you",
+  "footer.copyright": "Copyright",
+  "footer.allRight": "All Rights Reserved"
 }

@@ -14,8 +14,8 @@ const Social = () => {
       <ul>
         <li id="social-phone">
           <a
-            // eslint-disable-next-line
-            href="/contact"
+          // eslint-disable-next-line
+          //href="/contact"
           >
             <i
               style={{ color: "#42444d" }}
@@ -40,8 +40,16 @@ const Social = () => {
                 className="fab fa-whatsapp"
               />
               <span>+216 99 540 894</span>
+              <span className="phone-call">
+                <i className="fas fa-phone" />
+              </span>
             </div>
-            <div style={{ display: "flex" }}>
+            <div
+              style={{
+                display: "flex",
+                borderTop: "1px solid rgba(0, 0, 0, 0.125)",
+              }}
+            >
               <span
                 className="clipboard-copy"
                 onClick={() => {
@@ -58,6 +66,9 @@ const Social = () => {
                 className="fas fa-mobile-alt social-icon"
               />
               <span>+216 52 694 427</span>
+              <span className="phone-call">
+                <i className="fas fa-phone" />
+              </span>
             </div>
             {isCopy && (
               <span
