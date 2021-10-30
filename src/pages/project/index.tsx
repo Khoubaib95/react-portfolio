@@ -2,46 +2,37 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ProjectCard from "../../components/projectCard/index";
 import SEO from "../../components/seo";
-import Loader from "../../components/loader/loader";
+import { Loader } from "../../components/loader/loader";
+import { projectType, projectPropType } from "../../@types/types";
 
-type project = {
-  type: string;
-  name: string;
-  description: string;
-  mission: string;
-  technologie: [string];
-  website?: string;
-  github: {
-    isPrivate: boolean;
-    githubLink: string;
-  };
-};
-const Project = () => {
+const Project = (props: projectPropType) => {
+  const { mobileProjects, setMobileProject, webProjects, setWebProject } =
+    props;
   const [isWebTab, setIsWebTab] = useState(true);
-  const [webProjects, setWebProject] = useState<[project] | []>([]);
   const [isLoadind, setIsLoadind] = useState(false);
-  const [mobileProjects, setMobileProject] = useState<[project] | []>([]);
 
   useEffect(() => {
-    setIsLoadind(true);
-    axios
-      .get(`${process.env.REACT_APP_API_URL}/api/project`)
-      .then((res) => {
-        setWebProject(
-          //@ts-ignore
-          res.data.filter((p: any) => p.type === "WEB")
-        );
-        setMobileProject(
-          //@ts-ignore
-          res.data.filter((p: any) => p.type === "MOBILE")
-        );
-        setIsLoadind(false);
-      })
-      .catch((e) => {});
-  }, []);
+    if (webProjects === null || mobileProjects === null) {
+      setIsLoadind(true);
+      axios
+        .get(`${process.env.REACT_APP_API_URL}/api/project`)
+        .then((res) => {
+          setWebProject(
+            //@ts-ignore
+            res.data.filter((p: any) => p.type === "WEB")
+          );
+          setMobileProject(
+            //@ts-ignore
+            res.data.filter((p: any) => p.type === "MOBILE")
+          );
+          setIsLoadind(false);
+        })
+        .catch((e) => {});
+    }
+  }, [mobileProjects, mobileProjects]);
   return (
     <>
-      <SEO title="projects" />
+      <SEO title="Projects" />
       <main id="project-main">
         <div className="project-header-type">
           <div className="project-type">
@@ -69,19 +60,19 @@ const Project = () => {
             className="project-type-underline"
           ></div>
         </div>
-        {isLoadind ? (
-          <>
-            <Loader />
-          </>
-        ) : isWebTab ? (
-          webProjects.map((p: project, i: number) => (
-            <ProjectCard key={i} {...p} />
-          ))
-        ) : (
-          mobileProjects.map((p: project, i: number) => (
-            <ProjectCard key={i} {...p} />
-          ))
-        )}
+        <div className="projects-list-container">
+          {isLoadind ? (
+            <Loader height="60px" />
+          ) : isWebTab ? (
+            webProjects?.map((p: projectType, i: number) => (
+              <ProjectCard key={i} {...p} />
+            ))
+          ) : (
+            mobileProjects?.map((p: projectType, i: number) => (
+              <ProjectCard key={i} {...p} />
+            ))
+          )}
+        </div>
       </main>
     </>
   );

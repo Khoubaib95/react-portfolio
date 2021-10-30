@@ -2,7 +2,8 @@ import { Tech, techPropType } from "../../components/technologies/index";
 import { FormattedMessage } from "react-intl";
 
 const ProjectCard = ({
-  /*img,*/ type,
+  img,
+  type,
   name,
   description,
   mission,
@@ -12,17 +13,19 @@ const ProjectCard = ({
 }: any) => (
   <div className="project-card">
     <div className="project-img-container">
-      {<img src="/images/portfolio-website-image.png" alt="Not Fount" />}
+      <img
+        src={img}
+        /*"/images/portfolio-website-image.png"*/ alt="Not Fount"
+      />
     </div>
     <div className="project-content">
       <h3 className="project-title">{name}</h3>
       <p className="project-description">{description}</p>
       <div className="project-mission">
-        <h4 style={{ fontWeight: "bold" }}>Mession :</h4>
-        <p style={{ margin: 0 }}>
-          this is my Portfolio Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit.
-        </p>
+        <h4 style={{ fontWeight: "bold" }}>
+          <FormattedMessage id="project.task" /> :
+        </h4>
+        <p style={{ margin: 0 }}>{mission}</p>
       </div>
       <div className="project-technologies">
         <h4 style={{ fontWeight: "bold" }}>
@@ -36,7 +39,7 @@ const ProjectCard = ({
       </div>
       <div className="project-external-link">
         <h4 style={{ fontWeight: "bold" }}>
-          <FormattedMessage id="project.preview" /> :{" "}
+          <FormattedMessage id="project.preview" /> :
         </h4>
         <div className="project-github">
           {github.isPrivate ? (
@@ -45,7 +48,7 @@ const ProjectCard = ({
                 className="fab fa-github"
                 style={{ color: "#b9b9b9", marginRight: "3px" }}
               />
-              Private on github
+              <FormattedMessage id="project.githube.private" />
             </div>
           ) : (
             <div className="project-github-public">
@@ -59,15 +62,20 @@ const ProjectCard = ({
                   className="fab fa-github"
                   style={{ marginRight: "3px", color: "inherit" }}
                 />
-                See on github
+                <FormattedMessage id="project.githube.public" />
               </a>
             </div>
           )}
         </div>
         {website && (
           <div className="project-website">
-            <i className="fas fa-globe-africa" style={{ marginRight: "3px" }} />
-            {website}
+            <a style={{ color: "inherit" }} href={website}>
+              <i
+                className="fas fa-globe-africa"
+                style={{ marginRight: "3px" }}
+              />
+              {website.split("://")[1]}
+            </a>
           </div>
         )}
       </div>
