@@ -1,17 +1,5 @@
 import { FormattedMessage } from "react-intl";
-import {
-  ES6,
-  TypeScript,
-  Html5,
-  Css3,
-  MongoDB,
-  Expressjs,
-  Nodejs,
-  Reactjs,
-  Redux,
-  Nestjs,
-  Nextjs,
-} from "../technologies/index";
+import { Bage } from "../technologies/index";
 const MainContent = () => (
   <main id="home-main">
     <section id="home-main-section">
@@ -20,7 +8,7 @@ const MainContent = () => (
           <i className="fas fa-user-tie" />
           <FormattedMessage id="home.summary" />
         </h3>
-        <p>
+        <p style={{ marginBottom: "0" }}>
           <FormattedMessage id="home.summary.content" />
         </p>
       </div>
@@ -31,26 +19,43 @@ const MainContent = () => (
         </h3>
         <ul className="education_list">
           <li>
-            <span className="education_list_year">2019 - 2020 :</span>
+            <span className="education_list_year">2020 </span>
             <p className="education_list_desc">
-              Obtention du Baccalauréat Science Expérimentale.
+              <FormattedMessage id="home.education.master" />
             </p>
           </li>
           <li>
-            <span className="education_list_year">2018 - 2019 :</span>
+            <span className="education_list_year">2019 </span>
             <p className="education_list_desc">
-              Licence appliqué en réseaux informatique au sein de
+              <FormattedMessage id="home.education.bachelor" />
               <b>
-                l’Institut Supérieur d’Informatique et de Techniques des
-                communication(ISIT’Com)– Hammam Sousse
+                <FormattedMessage id="home.education.bachelor.inst" /> Supérieur
+                d’Informatique et de Techniques des communication(ISIT’Com)–
+                Hammam Sousse
               </b>
               .
             </p>
           </li>
           <li>
-            <span className="education_list_year">2015 - 2016 :</span>
+            <span className="education_list_year">2016 </span>
             <p className="education_list_desc">
-              Obtention du Baccalauréat en Science Expérimentale.
+              <FormattedMessage id="home.education.bac" />
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div className="about_section">
+        <h3 style={{ display: "flex", alignItems: "center" }}>
+          <i className="fas fa-users" />
+          <span>
+            <FormattedMessage id="home.pro.dev" />
+          </span>
+        </h3>
+        <ul className="education_list">
+          <li>
+            <span className="education_list_year">2021 </span>
+            <p className="education_list_desc">
+              Obtention du Baccalauréat Science Expérimentale.
             </p>
           </li>
         </ul>
@@ -89,10 +94,10 @@ const MainContent = () => (
             <FormattedMessage id="home.skills.prog" />
           </h4>
           <div className="skills-list">
-            <ES6 />
-            <TypeScript />
-            <Html5 />
-            <Css3 />
+            <Bage name="JavaScript ES6" color="f5c434" />
+            <Bage name="TypeScript" color="2f74c0" />
+            <Bage name="HTML 5" color="dd4b25" />
+            <Bage name="CSS 3" color="2962e9" />
           </div>
         </div>
         <div className="skills-container">
@@ -100,7 +105,7 @@ const MainContent = () => (
             <FormattedMessage id="home.skills.db" />
           </h4>
           <div className="skills-list">
-            <MongoDB />
+            <Bage name="MongoDB" color="93dd53" />
           </div>
         </div>
         <div className="skills-container">
@@ -108,12 +113,12 @@ const MainContent = () => (
             <FormattedMessage id="home.skills.fl" />
           </h4>
           <div className="skills-list">
-            <Expressjs />
-            <Reactjs />
-            <Nodejs />
-            <Redux />
-            <Nestjs />
-            <Nextjs />
+            <Bage name="Express js" color="7e7e7e" />
+            <Bage name="React js" color="5ed3f3" />
+            <Bage name="Node js" color="8ac52a" />
+            <Bage name="Redux" color="7752bd" />
+            <Bage name="Nest js" color="e44344" />
+            <Bage name="Next js" color="000000" />
           </div>
         </div>
       </div>
@@ -122,16 +127,7 @@ const MainContent = () => (
           <FormattedMessage id="home.skills.design" />
         </h4>
         <div className="skills-list">
-          <div
-            className="skills"
-            style={{
-              color: "#ec74ee",
-              backgroundColor: "#ec74ee2e",
-              borderColor: "#ec74ee",
-            }}
-          >
-            Adobe XD
-          </div>
+          <Bage name="Adobe XD" color="ec74ee" />
         </div>
       </div>
       <div className="skills-container">
@@ -139,47 +135,10 @@ const MainContent = () => (
           <FormattedMessage id="home.skills.col" />
         </h4>
         <div className="skills-list">
-          <div
-            className="skills"
-            style={{
-              color: "#1b1f23",
-              backgroundColor: "#1b1f232e",
-              borderColor: "#1b1f23",
-            }}
-          >
-            Github
-          </div>
-
-          <div
-            className="skills"
-            style={{
-              color: "#f49e2d",
-              backgroundColor: "#f49e2d2e",
-              borderColor: "#f49e2d",
-            }}
-          >
-            Gitlab
-          </div>
-          <div
-            className="skills"
-            style={{
-              color: "#2580f7",
-              backgroundColor: "#2580f72e",
-              borderColor: "#2580f7",
-            }}
-          >
-            Jira
-          </div>
-          <div
-            className="skills"
-            style={{
-              color: "#ca4059",
-              backgroundColor: "#ca40592e",
-              borderColor: "#ca4059",
-            }}
-          >
-            Slack
-          </div>
+          <Bage name="Github" color="1b1f23" />
+          <Bage name="Gitlab" color="f49e2d" />
+          <Bage name="Jira" color="2580f7" />
+          <Bage name="Slack" color="ca4059" />
         </div>
       </div>
       <div>

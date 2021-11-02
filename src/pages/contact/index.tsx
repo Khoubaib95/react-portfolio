@@ -193,11 +193,11 @@ function Contact(language: { language: string }) {
                         }}
                       />
                       <h2>
-                        Message sent{" "}
+                        Message sent
                         <i
                           style={{ fontSize: "22px" }}
                           className="fas fa-check"
-                        ></i>
+                        />
                       </h2>
                       <span style={{ fontSize: "20px" }}>
                         Thanks for being in touch
