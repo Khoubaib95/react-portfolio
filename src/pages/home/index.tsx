@@ -42,12 +42,7 @@ const Home = () => (
       />
     </header>
     <div id="cv-pdf">
-      <a
-        style={{ color: "white" }}
-        target="_blank"
-        href="https://youtube.com/"
-        rel="noreferrer"
-      >
+      <a style={{ color: "white" }} target="_blank" href="/cv" rel="noreferrer">
         <b>
           <FormattedMessage id="home.cv.format" />{" "}
           <i className="fas fa-external-link-alt" />

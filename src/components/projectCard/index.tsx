@@ -1,4 +1,4 @@
-import { Bage } from "../../components/technologies/index";
+import { Bage } from "../compo/index";
 import { techType, ownerType } from "../../@types/types";
 import { FormattedMessage } from "react-intl";
 

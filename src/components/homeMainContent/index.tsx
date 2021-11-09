@@ -1,14 +1,14 @@
 import { FormattedMessage } from "react-intl";
-import { Bage } from "../technologies/index";
+import { Bage, Participation } from "../compo/index";
 const MainContent = () => (
   <main id="home-main">
     <section id="home-main-section">
-      <div className="about_section">
+      <div className="about_section" style={{}}>
         <h3>
           <i className="fas fa-user-tie" />
           <FormattedMessage id="home.summary" />
         </h3>
-        <p style={{ marginBottom: "0" }}>
+        <p style={{ margin: "0" }}>
           <FormattedMessage id="home.summary.content" />
         </p>
       </div>
@@ -29,9 +29,8 @@ const MainContent = () => (
             <p className="education_list_desc">
               <FormattedMessage id="home.education.bachelor" />
               <b>
-                <FormattedMessage id="home.education.bachelor.inst" /> Supérieur
-                d’Informatique et de Techniques des communication(ISIT’Com)–
-                Hammam Sousse
+                , Institut Supérieur d’Informatique et de Techniques des
+                communication(ISIT’Com)– Hammam Sousse
               </b>
               .
             </p>
@@ -54,9 +53,98 @@ const MainContent = () => (
         <ul className="education_list">
           <li>
             <span className="education_list_year">2021 </span>
-            <p className="education_list_desc">
-              Obtention du Baccalauréat Science Expérimentale.
-            </p>
+            <div className="dev_pro">
+              <div
+                className="education_list_desc"
+                style={{ fontWeight: "bolder" }}
+              >
+                <span>
+                  <FormattedMessage id="google.ux.cert" />
+                </span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span className="education_list_year">2021 </span>
+            <div className="dev_pro">
+              <div
+                className="education_list_desc"
+                style={{ fontWeight: "bolder" }}
+              >
+                <span>
+                  <FormattedMessage id="hapt.cert" /> Horizon Academy of
+                  Professional Training{" "}
+                </span>
+                <a
+                  id="hapt"
+                  target="_blank"
+                  className="skills"
+                  rel="noreferrer"
+                  href="https://hapt.tn"
+                >
+                  HAPT <i className="fas fa-external-link-alt" />
+                </a>
+              </div>
+              <ul>
+                <li>UI/UX (Adobe XD)</li>
+                <li>HTML5, CSS3, Javascript</li>
+                <li>React JS ( ECMAScript ES6/7, TypeScript )</li>
+                <li>Nest JS, Express JS ( Ecmascript ES6/7, TypeScript )</li>
+                <li>MongoDB</li>
+                <li>
+                  <FormattedMessage id="traineeship" /> ( 1{" "}
+                  <FormattedMessage id="month" /> )
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <ul className="education_list">
+          <li style={{ marginBottom: "10px" }}>
+            <span className="education_list_year">2021 </span>
+            <div className="dev_pro">
+              <div
+                style={{ fontWeight: "bolder", textAlign: "left" }}
+                className="education_list_desc"
+              >
+                <span>
+                  <FormattedMessage id="freecodecamp.cert" />
+                </span>
+                <a
+                  id="free_codecamp_certif"
+                  target="_blank"
+                  className="skills"
+                  rel="noreferrer"
+                  href="https://www.freecodecamp.org/certification/abdellaoui_khoubaib/responsive-web-design"
+                >
+                  Responsive Web Design{" "}
+                  <i className="fas fa-external-link-alt" />
+                </a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span className="education_list_year">2020 </span>
+            <div className="dev_pro">
+              <div
+                style={{ fontWeight: "bolder", textAlign: "left" }}
+                className="education_list_desc"
+              >
+                <span>
+                  <FormattedMessage id="freecodecamp.cert" />
+                </span>
+                <a
+                  id="free_codecamp_certif"
+                  target="_blank"
+                  className="skills"
+                  rel="noreferrer"
+                  href="https://www.freecodecamp.org/certification/abdellaoui_khoubaib/back-end-development-and-apis"
+                >
+                  Back End Development and APIs{" "}
+                  <i className="fas fa-external-link-alt" />
+                </a>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -65,21 +153,71 @@ const MainContent = () => (
           <i className="fas fa-business-time" />
           <FormattedMessage id="home.experience" />
         </h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem amet
-          id odio, deserunt eos nulla sint recusandae doloribus! Qui labore
-          porro consequatur facere dolorum? Tempore temporibus dolores nesciunt
-          placeat officiis. Et inventore blanditiis, consequuntur non vero
-          expedita asperiores deserunt laboriosam voluptatum quibusdam nihil
-          incidunt odio necessitatibus aut maxime, nobis possimus reprehenderit
-          earum, esse ea sunt. Beatae nobis illo distinctio. Distinctio.
-          Voluptas reiciendis dolore, consequatur tenetur culpa eveniet
-          repudiandae reprehenderit fugit, sapiente sed corporis? Sint incidunt
-          eum culpa, impedit quidem inventore officiis omnis quas aut eveniet
-          necessitatibus quisquam exercitationem vero harum? Modi ut facilis
-          tenetur ab. Molestiae voluptatum molestias voluptate quam ipsa ipsam
-          pariatur? Aliquam nam eligendi temporibus iure laudantium
-        </p>
+        <ul className="education_list">
+          <li>
+            <span className="education_list_year">
+              2021 ( <FormattedMessage id="june" /> )
+            </span>
+            <div className="dev_pro">
+              <div
+                className="education_list_desc"
+                style={{ fontWeight: "bolder" }}
+              >
+                <span>Tuskens</span>
+                <br />
+                <span>
+                  <FormattedMessage id="Junior.developer" />
+                </span>
+              </div>
+
+              <ul>
+                <li>UI/UX (Adobe XD)</li>
+                <li>HTML5, CSS3, Javascript</li>
+                <li>React JS ( Ecmascript ES6/7, TypeScript )</li>
+                <li>Nest JS, Express JS ( Ecmascript ES6/7, TypeScript )</li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span className="education_list_year">
+              2021 ( <FormattedMessage id="april" /> )
+            </span>
+            <div className="dev_pro">
+              <div
+                className="education_list_desc"
+                style={{ fontWeight: "bolder" }}
+              >
+                <span>
+                  Horizon Academy of Professional{" "}
+                  <FormattedMessage id="traineeship" /> ( 1{" "}
+                  <FormattedMessage id="month.internship" /> )
+                </span>
+              </div>
+              <span>
+                <FormattedMessage id="home.experience.training" /> :
+              </span>
+              <ul>
+                <li>
+                  <span style={{ fontWeight: 400 }}>UI/UX : </span>
+                  <FormattedMessage id="home.experience.training.ui/ux" />{" "}
+                  <Participation percent={20} />
+                </li>
+                <li>
+                  <span style={{ fontWeight: 400 }}>Front End : </span>
+                  <FormattedMessage id="home.experience.training.front" />(
+                  Ecmascript ES6/7, TypeScript, Material ui ){" "}
+                  <Participation percent={80} />
+                </li>
+                <li>
+                  <span style={{ fontWeight: 400 }}>Back End : </span>
+                  <FormattedMessage id="home.experience.training.back" />
+                  Nest JS, Express JS ( Ecmascript ES6/7, TypeScript ), MongoDB{" "}
+                  <Participation percent={75} />
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
     <aside
@@ -113,12 +251,14 @@ const MainContent = () => (
             <FormattedMessage id="home.skills.fl" />
           </h4>
           <div className="skills-list">
-            <Bage name="Express js" color="7e7e7e" />
             <Bage name="React js" color="5ed3f3" />
-            <Bage name="Node js" color="8ac52a" />
-            <Bage name="Redux" color="7752bd" />
-            <Bage name="Nest js" color="e44344" />
             <Bage name="Next js" color="000000" />
+            <Bage name="Redux" color="7752bd" />
+            <Bage name="Bootstrap" color="7952b3" />
+            <Bage name="Material-UI" color="007FFF" />
+            <Bage name="Express js" color="7e7e7e" />
+            <Bage name="Node js" color="8ac52a" />
+            <Bage name="Nest js" color="e44344" />
           </div>
         </div>
       </div>
@@ -166,13 +306,21 @@ const MainContent = () => (
               <span>
                 <FormattedMessage id="home.languages.fr" />
               </span>
-              <span className="languages-degree">80%</span>
+              <span className="languages-degree">75% - 85%</span>
             </div>
             <div
               className="languages-degree-prog"
               style={{ width: "100%", borderRadius: "0.25rem" }}
             >
-              <div style={{ width: "80%" }}></div>
+              <div style={{ width: "85%", backgroundColor: "#6bff6b" }}></div>
+              <div
+                style={{
+                  width: "75%",
+                  marginTop: "-16px",
+                  borderTopRightRadius: 0,
+                  borderBottomRightRadius: 0,
+                }}
+              ></div>
             </div>
           </li>
           <li>
@@ -180,13 +328,21 @@ const MainContent = () => (
               <span>
                 <FormattedMessage id="home.languages.en" />
               </span>
-              <span className="languages-degree">60%</span>
+              <span className="languages-degree">60% - 80%</span>
             </div>
             <div
               className="languages-degree-prog"
               style={{ width: "100%", borderRadius: "0.25rem" }}
             >
-              <div style={{ width: "60%" }}></div>
+              <div style={{ width: "80%", backgroundColor: "#6bff6b" }}></div>
+              <div
+                style={{
+                  width: "60%",
+                  marginTop: "-16px",
+                  borderTopRightRadius: 0,
+                  borderBottomRightRadius: 0,
+                }}
+              ></div>
             </div>
           </li>
         </ul>
