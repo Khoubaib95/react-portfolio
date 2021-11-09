@@ -14,7 +14,8 @@ const NotFound = React.lazy(() => import("./pages/notFound/index"));
 
 function App() {
   const [language, setLanguage] = useState<string>(
-    localStorage.getItem("language") || navigator.language.split("-")[0]
+    localStorage.getItem("language") ||
+      "en" /*navigator.language.split("-")[0]*/
   );
   const [webProjects, setWebProject] = useState<[projectType] | [] | null>(
     null

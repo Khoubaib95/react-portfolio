@@ -13,15 +13,12 @@ const Social = () => {
     <aside id="social">
       <ul>
         <li id="social-phone">
-          <a
-          // eslint-disable-next-line
-          //href="/contact"
-          >
+          <span>
             <i
               style={{ color: "#42444d" }}
               className="fas fa-mobile-alt social-icon"
             />
-          </a>
+          </span>
           <div id="phone-number">
             <div style={{ display: "flex" }}>
               <span
@@ -128,12 +125,16 @@ const Social = () => {
           </a>
         </li>
         <li>
-          <NavLink to="/">
+          <a
+            href="https://www.linkedin.com/in/abdellaoui-khoubaib-4601a9134/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i
               style={{ color: "#0e76a8" }}
               className="fab fa-linkedin social-icon"
             />
-          </NavLink>
+          </a>
         </li>
         <li>
           <a

@@ -89,7 +89,7 @@ const MainContent = () => (
                 <li>UI/UX (Adobe XD)</li>
                 <li>HTML5, CSS3, Javascript</li>
                 <li>React JS ( ECMAScript ES6/7, TypeScript )</li>
-                <li>Nest JS, Express JS ( Ecmascript ES6/7, TypeScript )</li>
+                <li>Nest JS, Express JS ( ECMAScript ES6/7, TypeScript )</li>
                 <li>MongoDB</li>
                 <li>
                   <FormattedMessage id="traineeship" /> ( 1{" "}
@@ -170,12 +170,9 @@ const MainContent = () => (
                 </span>
               </div>
 
-              <ul>
-                <li>UI/UX (Adobe XD)</li>
-                <li>HTML5, CSS3, Javascript</li>
-                <li>React JS ( Ecmascript ES6/7, TypeScript )</li>
-                <li>Nest JS, Express JS ( Ecmascript ES6/7, TypeScript )</li>
-              </ul>
+              <span>
+                <FormattedMessage id="Junior.developer.task" />
+              </span>
             </div>
           </li>
           <li>
@@ -205,13 +202,13 @@ const MainContent = () => (
                 <li>
                   <span style={{ fontWeight: 400 }}>Front End : </span>
                   <FormattedMessage id="home.experience.training.front" />(
-                  Ecmascript ES6/7, TypeScript, Material ui ){" "}
+                  ECMAScript ES6/7, TypeScript, Material ui ){" "}
                   <Participation percent={80} />
                 </li>
                 <li>
                   <span style={{ fontWeight: 400 }}>Back End : </span>
                   <FormattedMessage id="home.experience.training.back" />
-                  Nest JS, Express JS ( Ecmascript ES6/7, TypeScript ), MongoDB{" "}
+                  Nest JS, Express JS ( ECMAScript ES6/7, TypeScript ), MongoDB{" "}
                   <Participation percent={75} />
                 </li>
               </ul>

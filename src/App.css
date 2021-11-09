@@ -1139,13 +1139,16 @@ footer {
   height: calc(100vh - 163px);
 }
 #not-found {
-  margin: 30px auto;
-  width: 50%;
+  margin: 30px auto 0;
   text-align: center;
 }
 #not-found h1 {
   font-size: 90px;
   font-weight: bold;
+  background: linear-gradient(60deg, blue, #26d0ce, blue, #26d0ce, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 #not-found p {
   font-size: 30px;
@@ -1159,7 +1162,7 @@ footer {
   width: 145px;
   margin: 15px auto 0px;
   height: 20px;
-  background-color: blue;
+  background-color: #09d;
   padding: 10px;
   color: white;
   font-size: 20px;

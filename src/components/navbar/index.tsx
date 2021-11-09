@@ -90,15 +90,6 @@ const MobileNavbar = ({ setLanguage, language }: any) => {
           </span>
           <div id="mobile-navbar-language">
             <span
-              className={language === "fr" ? "dropdown-selected" : ""}
-              onClick={() => {
-                localStorage.setItem("language", "fr");
-                setLanguage("fr");
-              }}
-            >
-              <img alt="France" src="images/lang_icon/France-icon.png" />
-            </span>
-            <span
               className={language === "en" ? "dropdown-selected" : ""}
               onClick={() => {
                 localStorage.setItem("language", "en");
@@ -110,6 +101,16 @@ const MobileNavbar = ({ setLanguage, language }: any) => {
                 src="images/lang_icon/United-kingdom-icon.png"
               />
             </span>
+            <span
+              className={language === "fr" ? "dropdown-selected" : ""}
+              onClick={() => {
+                localStorage.setItem("language", "fr");
+                setLanguage("fr");
+              }}
+            >
+              <img alt="France" src="images/lang_icon/France-icon.png" />
+            </span>
+
             <span
               className={language === "de" ? "dropdown-selected" : ""}
               onClick={() => {
@@ -186,15 +187,6 @@ const Nav = ({ setLanguage, language }: any) => (
             }}
           >
             <li
-              className={language === "fr" ? "dropdown-selected" : ""}
-              onClick={() => {
-                localStorage.setItem("language", "fr");
-                setLanguage("fr");
-              }}
-            >
-              <img alt="France" src="images/lang_icon/France-icon.png" />
-            </li>
-            <li
               className={language === "en" ? "dropdown-selected" : ""}
               onClick={() => {
                 localStorage.setItem("language", "en");
@@ -206,6 +198,16 @@ const Nav = ({ setLanguage, language }: any) => (
                 src="images/lang_icon/United-kingdom-icon.png"
               />
             </li>
+            <li
+              className={language === "fr" ? "dropdown-selected" : ""}
+              onClick={() => {
+                localStorage.setItem("language", "fr");
+                setLanguage("fr");
+              }}
+            >
+              <img alt="France" src="images/lang_icon/France-icon.png" />
+            </li>
+
             <li
               className={language === "de" ? "dropdown-selected" : ""}
               onClick={() => {

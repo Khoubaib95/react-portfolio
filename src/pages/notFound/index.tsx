@@ -9,13 +9,13 @@ const NotFound = () => {
         <p>
           404 - <FormattedMessage id="page.notfound" />
         </p>
-        <span>
-          The page you are looking for might have been removed had its name
-          changed or is temporarily unavailable
-        </span>
-
+        <div style={{ maxWidth: "300px", margin: "0 auto" }}>
+          <span>
+            <FormattedMessage id="page.notfound.info" />
+          </span>
+        </div>
         <NavLink rel="noopener noreferrer" to="/">
-          go to home page
+          <FormattedMessage id="home.page" />
         </NavLink>
       </div>
     </div>
