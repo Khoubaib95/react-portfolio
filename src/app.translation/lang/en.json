@@ -58,6 +58,7 @@
   "project.task": "Task",
   "project.status": "Status",
   "project.owner": "Owner",
+  "no.project.uploaded": "No project uploaded for the moment",
   "project.githube.public": "See on github",
   "project.githube.private": "Private on github",
   "blog.content": "This content is going to be available soon",

@@ -88,14 +88,14 @@ nav {
   background-color: inherit !important;
 }
 #navList {
-  width: 40%;
+  width: 45%;
   height: 60%;
   display: flex;
   align-items: center;
   margin: 0 auto;
 }
 #navList li {
-  width: 25%;
+  width: 100%;
   height: 100%;
 }
 #navList li a {
@@ -1149,6 +1149,8 @@ footer {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  width: max-content;
+  margin: 0 auto;
 }
 #not-found p {
   font-size: 30px;

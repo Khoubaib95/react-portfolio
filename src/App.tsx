@@ -54,9 +54,6 @@ function App() {
                 <Blog />
               </Suspense>
             </Route>
-            <Route exact path="/l">
-              <Loader />
-            </Route>
             <Route exact>
               <Suspense fallback={<Loader />}>
                 <NotFound />
