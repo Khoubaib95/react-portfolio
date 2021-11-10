@@ -185,8 +185,7 @@ const MainContent = () => (
                 style={{ fontWeight: "bolder" }}
               >
                 <span>
-                  Horizon Academy of Professional{" "}
-                  <FormattedMessage id="traineeship" /> ( 1{" "}
+                  Horizon Academy of Professional Training( 1{" "}
                   <FormattedMessage id="month.internship" /> )
                 </span>
               </div>
