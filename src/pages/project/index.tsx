@@ -16,7 +16,7 @@ const Project = (props: projectPropType) => {
     if (webProjects === null || mobileProjects === null) {
       setIsLoadind(true);
       axios
-        .get(`${process.env.REACT_APP_API_URL}/api/project`)
+        .get(`${process.env.REACT_APP_LOCAL_API_URL}/api/project`)
         .then((res) => {
           setWebProject(
             //@ts-ignore

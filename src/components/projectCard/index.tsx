@@ -85,7 +85,7 @@ const ProjectCard = ({
             alignItems: "center",
           }}
         >
-          <div>
+          <div style={{ display: "flex", margin: 0, flexWrap: "wrap" }}>
             {github.isPrivate ? (
               <div className="project-github-private" style={{ margin: 0 }}>
                 <i
@@ -95,24 +95,30 @@ const ProjectCard = ({
                 <FormattedMessage id="project.githube.private" />
               </div>
             ) : (
-              <div className="project-github-public" style={{ margin: 0 }}>
-                <a
-                  style={{ color: "inherit" }}
-                  href={github.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+              github.githubProjects.map((p: any) => (
+                <div
+                  key={p._id}
+                  className="project-github-public truncate"
+                  style={{ margin: 5 }}
                 >
-                  <i
-                    className="fab fa-github"
-                    style={{ marginRight: "3px", color: "inherit" }}
-                  />
-                  <FormattedMessage id="project.githube.public" />
-                </a>
-              </div>
+                  <a
+                    style={{ color: "inherit" }}
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i
+                      className="fab fa-github"
+                      style={{ marginRight: "3px", color: "inherit" }}
+                    />
+                    {p.name}
+                  </a>
+                </div>
+              ))
             )}
           </div>
           {website && (
-            <div className="project-website">
+            <div className="project-website truncate">
               <a
                 style={{ color: "inherit" }}
                 href={website}
