@@ -17,7 +17,7 @@ export const Participation = ({ percent }: any) => (
   <span style={{ whiteSpace: "nowrap", backgroundColor: "#cccccc" }}>
     <span>
       <code className="code"> &lt; </code>
-    </span>{" "}
+    </span>
     <FormattedMessage id="myparticipation" /> {`${percent}%`}{" "}
     <code className="code">&#47;&gt;</code>
   </span>

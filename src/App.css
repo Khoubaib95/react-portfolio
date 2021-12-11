@@ -673,9 +673,9 @@ h3 i {
   cursor: pointer;
 }
 .project-github-private {
-  background-color: #b9b9b92e;
-  border: 2px solid #b9b9b9;
-  color: #b9b9b9;
+  background-color: #9191912e;
+  border: 2px solid #919191;
+  color: #919191;
   border-radius: 15px;
   padding: 2px 5px;
   cursor: not-allowed;

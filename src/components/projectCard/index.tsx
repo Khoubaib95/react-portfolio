@@ -90,7 +90,7 @@ const ProjectCard = ({
               <div className="project-github-private" style={{ margin: 0 }}>
                 <i
                   className="fab fa-github"
-                  style={{ color: "#b9b9b9", marginRight: "3px" }}
+                  style={{ color: "inherit", marginRight: "3px" }}
                 />
                 <FormattedMessage id="project.githube.private" />
               </div>

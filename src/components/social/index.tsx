@@ -126,7 +126,7 @@ const Social = () => {
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/in/abdellaoui-khoubaib-4601a9134/"
+            href="https://www.linkedin.com/in/khoubaib-abdellaoui-4601a9134/"
             target="_blank"
             rel="noopener noreferrer"
           >
