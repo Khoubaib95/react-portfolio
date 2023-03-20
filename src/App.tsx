@@ -1,5 +1,7 @@
-import React, { useState, Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ReactGA from "react-ga";
+import RouteChangeTracker from "./routeChangeTracker";
 import Nav from "./components/navbar/index";
 import Footer from "./components/footer/index";
 import LanguageProvider from "./app.translation/language.provider";
@@ -23,10 +25,18 @@ function App() {
   const [mobileProjects, setMobileProject] = useState<
     [projectType] | [] | null
   >(null);
+
+  useEffect(() => {
+    const TRACKING_ID = "G-6SZL8E2P4T";
+    ReactGA.initialize(TRACKING_ID);
+    console.log(window.location.pathname);
+  }, []);
+
   return (
     <LanguageProvider language={language}>
       <div className="App">
         <Router>
+          <RouteChangeTracker />
           <Nav setLanguage={setLanguage} language={language} />
           <Switch>
             <Route exact path="/">

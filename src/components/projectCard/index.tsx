@@ -13,7 +13,10 @@ const ProjectCard = ({
   status,
   owner,
 }: any) => (
-  <div className="project-card">
+  <div
+    className="project-card"
+    id={name.trim().replaceAll(" ", "-").toLowerCase()}
+  >
     <div className="project-img-container">
       <img src={img || ""} alt="Not Fount" />
     </div>
@@ -49,14 +52,17 @@ const ProjectCard = ({
         </h4>
 
         <span className="project-attributes-value">
-          {status}{" "}
+          {status}
           {status === "Achieved" && (
-            <i
-              style={{
-                color: "green",
-              }}
-              className="fas fa-check"
-            />
+            <>
+              {" "}
+              <i
+                style={{
+                  color: "green",
+                }}
+                className="fas fa-check"
+              />
+            </>
           )}
         </span>
       </div>
@@ -67,7 +73,6 @@ const ProjectCard = ({
         <div className="project-attributes-value">
           {owner?.map((o: ownerType) => (
             /* <Tech key={o._id} color={o.color} name={o.name} />*/
-
             <div key={o._id}>{o.name}</div>
           ))}
         </div>

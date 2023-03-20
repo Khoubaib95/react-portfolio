@@ -590,7 +590,7 @@ h3 i {
   position: relative;
   left: 0%;
   left: 50%;
-  background-color: blueviolet;
+  background-color: #29fffc;
   transition: left 0.3s;
 }
 .project-card {
@@ -613,9 +613,12 @@ h3 i {
 .project-img-container {
   width: 33%;
   height: fit-content;
+  border: 3px solid #26d0ce;
+  border-radius: 5px;
 }
 .project-img-container img {
   width: 100%;
+  display: flex;
 }
 .project-content {
   width: 65%;

@@ -19,7 +19,7 @@ async function sendMail({
   setIsSendSucc,
 }: mail) {
   axios
-    .post(`${process.env.REACT_APP_API_URL}/api/send_mail`, {
+    .post(`${process.env.REACT_APP_CLOUD_API_URL}send_mail`, {
       language,
       fullName,
       email,

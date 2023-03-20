@@ -130,9 +130,9 @@ const Nav = ({ setLanguage, language }: any) => (
   <nav id="nav">
     <div id="desktop-navbar">
       <h2 id="brand">
-        <a id="brandLink" href="/index.html" target="_blank">
+        <NavLink id="brandLink" exact to="/">
           Khoubaib
-        </a>
+        </NavLink>
       </h2>
       <ul id="navList">
         <li>

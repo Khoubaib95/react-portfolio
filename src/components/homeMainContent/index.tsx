@@ -156,6 +156,42 @@ const MainContent = () => (
         <ul className="education_list">
           <li>
             <span className="education_list_year">
+              2022 ( <FormattedMessage id="october" /> ) - 2023 (
+              <FormattedMessage id="march" /> )
+            </span>
+            <div className="dev_pro">
+              <div
+                className="education_list_desc"
+                style={{ fontWeight: "bolder" }}
+              >
+                <span>Timelapse</span>
+                <br />
+                <span>
+                  <FormattedMessage id="timelapse.developer" />
+                </span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span className="education_list_year">
+              2021 ( <FormattedMessage id="december" /> ) - 2022 (
+              <FormattedMessage id="february" /> )
+            </span>
+            <div className="dev_pro">
+              <div
+                className="education_list_desc"
+                style={{ fontWeight: "bolder" }}
+              >
+                <span>Emiketic</span>
+                <br />
+                <span>
+                  <FormattedMessage id="emiketic.Junior.developer" />
+                </span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span className="education_list_year">
               2021 ( <FormattedMessage id="june" /> )
             </span>
             <div className="dev_pro">
@@ -166,12 +202,12 @@ const MainContent = () => (
                 <span>Tuskens</span>
                 <br />
                 <span>
-                  <FormattedMessage id="Junior.developer" />
+                  <FormattedMessage id="tuskens.Junior.developer" />
                 </span>
               </div>
 
               <span>
-                <FormattedMessage id="Junior.developer.task" />
+                <FormattedMessage id="tuskens.Junior.developer.task" />
               </span>
             </div>
           </li>
@@ -250,8 +286,9 @@ const MainContent = () => (
             <Bage name="React js" color="5ed3f3" />
             <Bage name="Next js" color="000000" />
             <Bage name="Redux" color="7752bd" />
-            <Bage name="Bootstrap" color="7952b3" />
+            <Bage name="Chakra-UI" color="00b9ad" />
             <Bage name="Material-UI" color="007FFF" />
+            <Bage name="Bootstrap" color="7952b3" />
             <Bage name="Express js" color="7e7e7e" />
             <Bage name="Node js" color="8ac52a" />
             <Bage name="Nest js" color="e44344" />
